@@ -1,0 +1,24 @@
+{
+  "name": "wallpaper-sun",
+  "version": "0.0.1",
+  "description": "Live Sun Desktop Image From NASA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wallpaper",
+    "sun",
+    "live",
+    "desktop",
+    "image",
+    "nasa",
+    "soho"
+  ],
+  "author": "Active 9 LLC.",
+  "license": "MIT",
+  "dependencies": {
+    "download": "^4.1.2",
+    "wallpaper": "^1.0.0"
+  }
+}
