@@ -15,6 +15,9 @@
     "nasa",
     "soho"
   ],
+  "bin": {
+    "windshield": "./bin/wallpaper-sun"
+  },
   "author": "Active 9 LLC.",
   "license": "MIT",
   "dependencies": {
