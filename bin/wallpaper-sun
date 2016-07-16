@@ -11,9 +11,11 @@ program
   .option('-i, --status', 'Shos the daemon status')
   .parse(process.argv);
 
+var wallpaperPath = path.resolve(path.resolve(__dirname, '../lib/'));
+var wallpaperDaemon = path.resolve(path.resolve(__dirname, '../lib/daemon.js'));
 if (program.start) {
-	console.log("start :: ",path.resolve('./lib/daemon.js'));
-	if (headlight.start(path.resolve('./lib/'),path.resolve('./lib/daemon.js'))) {
+	console.log("start :: ", wallpaperDaemon);
+	if (headlight.start(wallpaperPath,wallpaperDaemon)) {
 		console.log("Started.");
 
 		// We Force Kill The Process Here In About 3 Seconds To Break out of our Child Task Runner
@@ -22,15 +24,15 @@ if (program.start) {
 		console.log("Start Failed.");
 	}
 } else if (program.stop) {
-	if (headlight.stop(path.resolve('./lib/'))) {
+	if (headlight.stop(wallpaperPath)) {
 		console.log("Stopped.");
 	} else {
 		console.log("Stop Failed. Is the application running?");
 	}
 } else if (program.status) {
-	console.log(headlight.status(path.resolve('./lib/')));
+	console.log(headlight.status(wallpaperPath));
 } else {
-	// Retain Version 0.0.1 featureset
+	// Retain Version 0.0.1 features
 	console.log("Downloading The Latest Live Sol Image Composite From NASA...");
 	var wallpaperSun = require('../index.js');
 	wallpaperSun.process();
