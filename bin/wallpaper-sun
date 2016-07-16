@@ -1,3 +1,37 @@
 #!/usr/bin/env node
-console.log("Downloading The Latest Live Sol Image Composite From NASA...");
-require('../index.js');
+
+var program = require('commander');
+var headlight = require('headlight');
+var path = require('path');
+
+program
+  .version(require('../package.json').version)
+  .option('-s, --start', 'Start the daemon that updates every 15 minutes')
+  .option('-x, --stop', 'Stop the daemon')
+  .option('-i, --status', 'Shos the daemon status')
+  .parse(process.argv);
+
+if (program.start) {
+	console.log("start :: ",path.resolve('./lib/daemon.js'));
+	if (headlight.start(path.resolve('./lib/'),path.resolve('./lib/daemon.js'))) {
+		console.log("Started.");
+
+		// We Force Kill The Process Here In About 3 Seconds To Break out of our Child Task Runner
+		setTimeout(function() {process.exit(1);},3000);
+	} else {
+		console.log("Start Failed.");
+	}
+} else if (program.stop) {
+	if (headlight.stop(path.resolve('./lib/'))) {
+		console.log("Stopped.");
+	} else {
+		console.log("Stop Failed. Is the application running?");
+	}
+} else if (program.status) {
+	console.log(headlight.status(path.resolve('./lib/')));
+} else {
+	// Retain Version 0.0.1 featureset
+	console.log("Downloading The Latest Live Sol Image Composite From NASA...");
+	var wallpaperSun = require('../index.js');
+	wallpaperSun.process();
+}
