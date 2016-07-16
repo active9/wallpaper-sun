@@ -1,6 +1,6 @@
 {
   "name": "wallpaper-sun",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Live Sun Desktop Image From NASA",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "cron": "^1.1.0",
-    "download": "^4.1.2",
+    "download": "^5.0.2",
     "headlight": "0.0.4",
-    "wallpaper": "^1.0.0"
+    "wallpaper": "^2.2.0"
   }
 }
