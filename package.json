@@ -1,9 +1,10 @@
 {
   "name": "wallpaper-sun",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Live Sun Desktop Image From NASA",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint index.js example.js bin/** lib/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,10 +22,11 @@
   "author": "Active 9 LLC.",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
-    "cron": "^1.1.0",
-    "download": "^5.0.2",
+    "commander": "^2.11.0",
+    "cron": "^1.2.1",
+    "download": "^6.2.5",
     "headlight": "0.0.4",
-    "wallpaper": "^2.2.0"
+    "moment": "^2.18.1",
+    "wallpaper": "^2.5.0"
   }
 }
