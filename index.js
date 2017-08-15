@@ -11,7 +11,8 @@ module.exports = {
       var folderLMM = moment(data.mtime.toISOString());
       var res = moment(folderLMM).isBefore(previousLMM);
       if (res) {
-        download('http://sdo.gsfc.nasa.gov/assets/img/latest/f_211_193_171.jpg','./sun/')
+        // This image has been updated from the image at http://sdo.gsfc.nasa.gov/assets/img/latest/f_211_193_171.jpg due to NASA not updating this composite in over a month
+        download('https://sdo.gsfc.nasa.gov/assets/img/latest/f_211_193_171pfss.jpg','./sun/')
           .then(function (fileData) {
             if (!fileData) {
               console.log('File Download Error ::', fileData);
