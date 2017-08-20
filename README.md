@@ -21,17 +21,17 @@ Wallpaper SUN can run as a background daemon which will update the wallpaper eve
 
 Start the wallpaper-sun daemon:
 ```bash
-wallpaper-sun start
+wallpaper-sun --start
 ```
 
 Stop the wallpaper-sun daemon:
 ```bash
-wallpaper-sun stop
+wallpaper-sun --stop
 ```
 
 Status the wallpaper-sun daemon:
 ```bash
-wallpaper-sun status
+wallpaper-sun --status
 ```
 
 #ABOUT

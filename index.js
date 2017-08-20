@@ -2,7 +2,7 @@ var fs = require('fs');
 var wallpaper = require('wallpaper');
 var moment = require('moment');
 var download = require('download');
-var wallpaperFile = './sun/f_211_193_171.jpg';
+var wallpaperFile = './sun/f_211_193_171pfss.jpg'; // './sun/f_211_193_171.jpg';
 
 module.exports = {
   process: function() {
