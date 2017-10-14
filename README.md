@@ -35,7 +35,7 @@ wallpaper-sun --status
 ```
 
 #ABOUT
-Wallpaper-SUN is an educational tool designed to show a live view of the sun as a desktop wallpaper from the NASA SDO GSFC image repository. Specifically the  near-live image of the sun in combined wavelengths 211, 193, 171 angstrom, as seen by NASA's SDO (http://sdo.gsfc.nasa.gov/assets/img/latest/f_211_193_171.jpg).
+Wallpaper-SUN is an educational tool designed to show a live view of the sun as a desktop wallpaper from the NASA SDO GSFC image repository. Specifically the  near-live image of the sun in combined wavelengths 211, 193, 171 angstrom, as seen by NASA's SDO (https://sdo.gsfc.nasa.gov/assets/img/latest/latest_4096_211193171.jpg).
 
 ##CONTRIBUTING
 
